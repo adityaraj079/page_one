@@ -1,6 +1,29 @@
 //import 'package:fitegrate_project/rounded_button.dart';
 import 'package:flutter/material.dart';
 
+Widget _buildSocialBtn(Function onTap, AssetImage logo) {
+  return GestureDetector(
+    child: Container(
+      height: 40.0,
+      width: 40.0,
+      decoration: BoxDecoration(
+        shape: BoxShape.circle,
+        color: Colors.white,
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black26,
+            offset: Offset(0, 2),
+            blurRadius: 4.0,
+          ),
+        ],
+        image: DecorationImage(
+          image: logo,
+        ),
+      ),
+    ),
+  );
+}
+
 class SignIn extends StatefulWidget {
   const SignIn({ Key? key }) : super(key: key);
 
@@ -137,43 +160,59 @@ class _SignInState extends State<SignIn> {
       Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          InkWell(
-        onTap: () {},
-        child: Ink(
-          color: Color(0xFF397AF3),
-          child: Padding(
-        padding: EdgeInsets.all(6),
-        child: Wrap(
-          crossAxisAlignment: WrapCrossAlignment.center,
-          children: [
-            Icon(Icons.android), 
-            SizedBox(width: 12),
-            Text('Google'),
-          ],
-        ),
-          ),
-        ),
-      ),
+      //     InkWell(
+      //   onTap: () {},
+      //   child: Ink(
+      //     color: Color(0xFF397AF3),
+      //     child: Padding(
+      //   padding: EdgeInsets.all(6),
+      //   child: Wrap(
+      //     crossAxisAlignment: WrapCrossAlignment.center,
+      //     children: [
+      //       Icon(Icons.android), 
+      //       SizedBox(width: 12),
+      //       Text('Google'),
+      //     ],
+      //   ),
+      //     ),
+      //   ),
+      // ),
       
-      SizedBox( width: size.width * 0.08,),
+      // SizedBox( width: size.width * 0.08,),
       
-      InkWell(
-        onTap: () {},
-        child: Ink(
-          color: Color(0xFF397AF3),
-          child: Padding(
-        padding: EdgeInsets.all(6),
-        child: Wrap(
-          crossAxisAlignment: WrapCrossAlignment.center,
-          children: [
-            Icon(Icons.android), 
-            SizedBox(width: 12),
-            Text('Facebook'),
-          ],
-        ),
-          ),
-        ),
-      ),
+      // InkWell(
+      //   onTap: () {},
+      //   child: Ink(
+      //     color: Color(0xFF397AF3),
+      //     child: Padding(
+      //   padding: EdgeInsets.all(6),
+      //   child: Wrap(
+      //     crossAxisAlignment: WrapCrossAlignment.center,
+      //     children: [
+      //       Icon(Icons.android), 
+      //       SizedBox(width: 12),
+      //       Text('Facebook'),
+      //     ],
+      //   ),
+      //     ),
+      //   ),
+      // ),
+
+      _buildSocialBtn(
+                    () => print('Login with Facebook'),
+                    AssetImage(
+                      'assets/facebook.jpg',
+                    ),
+                  ),
+
+                  SizedBox(width: size.width*0.08,),
+
+                  _buildSocialBtn(
+                    () => print('Login with Google'),
+                    AssetImage(
+                      'assets/google.jpg',
+                    ),
+                      ),
       
           
         ],
