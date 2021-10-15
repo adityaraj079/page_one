@@ -1,13 +1,14 @@
-//import 'dart:ui';
 
+import 'dart:ui';
+import 'dart:core';
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:fitegrate_project/pallete.dart';
+import 'rounded_button.dart';
+//import 'dart:ui';
 //import 'package:fitegrate_project/pallete.dart';
 import 'package:fitegrate_project/screens/sign_in.dart';
 import 'package:fitegrate_project/screens/sign_up.dart';
-import 'package:flutter/material.dart';
-
-
-
-
 
 void main() {
   runApp(MyApp());
@@ -20,18 +21,24 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(
-       
-        primarySwatch: Colors.blue,
-      ),
 
-      //home: SignUp(),
-      initialRoute: '/',
+      theme: ThemeData.light(),
+      darkTheme:
+          ThemeData.dark(), // standard dark theme // device controls theme
+      home: MyHomePage(title: 'Flutter Demo Home Page'),
+    ),
+    
+    initialRoute: '/',
       routes: {
         '/': (context) => SignUp(),
         'SignIn': (context) => SignIn(),
       },
+
     );
+    
   }
 }
 
+
+
+      

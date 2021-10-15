@@ -50,6 +50,10 @@ flutter:
     - assets/black_logo.jpeg
     - assets/facebook.png
     - assets/google.png
+    - assets/logos/google.jpg
+    - assets/logos/facebook.jpg
+    - assets/sirs_logo.jpeg
+    - assets/dark_logo.jpeg
     - assets/black_bg_logo.jpeg
     - assets/logo_noname.jpeg
     - assets/black_part2.jpeg
