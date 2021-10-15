@@ -50,6 +50,9 @@ flutter:
     - assets/black_logo.jpeg
     - assets/facebook.png
     - assets/google.png
+    - assets/black_bg_logo.jpeg
+    - assets/logo_noname.jpeg
+    - assets/black_part2.jpeg
    
 
   # An image asset can refer to one or more resolution-specific "variants", see
