@@ -1,4 +1,6 @@
 import 'dart:core';
+import 'package:fitegrate_project/screens/bottom_navigation.dart';
+import 'package:fitegrate_project/screens/dashboard.dart';
 import 'package:flutter/material.dart';
 import 'package:fitegrate_project/screens/sign_in.dart';
 import 'package:fitegrate_project/screens/sign_up.dart';
@@ -23,6 +25,8 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => SignUp(),
         'SignIn': (context) => SignIn(),
+        'Dashboard':(context) => DashBoard(),
+        'BottomNavigation':(context) => MyStatefulWidget(),
       },
 
     );
